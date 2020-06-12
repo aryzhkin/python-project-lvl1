@@ -24,4 +24,3 @@ def give_question():
         return (answer, True)
     else:
         return (answer, False)
-
