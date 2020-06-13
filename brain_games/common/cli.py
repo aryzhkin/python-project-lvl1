@@ -1,6 +1,5 @@
 """Command line interface for brain-games."""
 import prompt
-import random
 
 
 def welcome_user():

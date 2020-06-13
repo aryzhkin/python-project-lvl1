@@ -1,4 +1,3 @@
-import prompt
 from brain_games.common import cli
 
 
@@ -29,4 +28,3 @@ def play_game(game):
                   "Let's try again, " + str(user_name) + "!")
 
     print('Congratulations, ' + user_name + '!')
-

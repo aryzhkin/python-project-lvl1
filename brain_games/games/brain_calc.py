@@ -1,10 +1,35 @@
-from brain_games.games import brain_calc
-from brain_games.common import game_engine
+import random
+import operator
+
+DESCRIPTION = 'What is the result of the expression?'
 
 
-def main():
-    game_engine.play_game(brain_calc)
+def generate_question_and_answer():
 
+    question = ''
+    correct_answer = ''
 
-if __name__ == '__main__':
-    main()
+    num1 = random.randint(1, 20)
+    num2 = random.randint(1, 20)
+
+    # Choose operation
+    operation = {
+        '+': operator.add,
+        '-': operator.sub,
+        '*': operator.mul,
+    }
+
+    # список операторов
+    list_operations = operation.keys()
+    # делаем коллекцию
+    list_operations = list(list_operations)
+    # выбираем один из операторов
+    operator_str = random.choice(list_operations)
+
+    # действие, которое требуется произвести
+    action = operation.get(operator_str)
+    correct_answer = str(action(num1, num2))
+
+    question = str(num1) + ' ' + operator_str + ' ' + str(num2)
+
+    return question, correct_answer
