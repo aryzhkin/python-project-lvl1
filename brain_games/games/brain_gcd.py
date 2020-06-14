@@ -12,7 +12,8 @@ def generate_question_and_answer():
     num2 = random.randint(10, 100)
     question = str(num1) + ' ' + str(num2)
 
-    # Используем алгоритм Евклида для нахождения наибольшего общего делителя (НОД)
+    # Используем алгоритм Евклида для нахождения
+    # наибольшего общего делителя (НОД)
     #  Вычислим, какое из чисел больше
     (bigger_num, smaller_num) = (num1, num2) if num1 > num2 else (num2, num1)
     #  Вычсислим сам НОД
