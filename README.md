@@ -4,3 +4,6 @@
 [![Build Status](https://travis-ci.org/aryzhkin/python-project-lvl1.svg?branch=master)](https://travis-ci.org/aryzhkin/python-project-lvl1)
 
 See asciinema (setup & play video) here: https://asciinema.org/a/syoBC2VuZbp04CRiSNE3vlSjn
+
+TODO:
+- docstrings

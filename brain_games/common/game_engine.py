@@ -22,7 +22,6 @@ def play_game(game):
             print('Correct!')
             i += 1
         else:
-            print(answer)
             print("'" + str(answer) + "' is wrong answer ;(. "
                   "Correct answer was '" + str(correct_answer) + "'.\n"
                   "Let's try again, " + str(user_name) + "!")
