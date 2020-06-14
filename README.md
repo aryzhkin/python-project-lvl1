@@ -1,10 +1,10 @@
-# Brain-games
-Made for hexlet.io python course<br />
-https://ru.hexlet.io/professions/python/projects/49
-
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Build Status](https://travis-ci.org/aryzhkin/python-project-lvl1.svg?branch=master)](https://travis-ci.org/aryzhkin/python-project-lvl1)
+
+# Brain-games
+Made for hexlet.io python course<br />
+https://ru.hexlet.io/professions/python/projects/49
 
 ## Game list
 - brain-calc: calculate numbers
