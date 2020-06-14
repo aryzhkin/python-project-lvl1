@@ -1,3 +1,10 @@
+"""
+Игра "Арифметическая прогрессия"
+Суть игры в следующем: Показываем игроку ряд чисел, образующий
+арифметическую прогрессию, заменив любое из чисел двумя точками.
+Игрок должен определить это число.
+"""
+
 import random
 
 DESCRIPTION = 'What number is missing in the progression?'
@@ -5,6 +12,11 @@ PROGRESSION_SIZE = 10
 
 
 def generate_question_and_answer():
+    """Generate question and answer for user
+    Returns:
+        question: string
+        correct_answer: string
+    """
 
     question = ''
     correct_answer = ''

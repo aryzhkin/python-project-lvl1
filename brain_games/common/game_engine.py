@@ -1,12 +1,15 @@
+"""Основной движок, содержащий общую логику для игр."""
 from brain_games.common import cli
 
 
-ROUND_COUNT = 3
+ROUND_COUNT = 3  # кол-во раундов для игрока
 
 
 def play_game(game):
+    """Launches the selected game
+    """
 
-    print('(new)Welcome to the Brain Games!')
+    print('Welcome to the Brain Games!')
     print(game.DESCRIPTION)
 
     user_name = cli.welcome_user()
@@ -25,5 +28,7 @@ def play_game(game):
             print("'" + str(answer) + "' is wrong answer ;(. "
                   "Correct answer was '" + str(correct_answer) + "'.\n"
                   "Let's try again, " + str(user_name) + "!")
+            break
 
-    print('Congratulations, ' + user_name + '!')
+    if (i == ROUND_COUNT):
+        print('Congratulations, ' + user_name + '!')

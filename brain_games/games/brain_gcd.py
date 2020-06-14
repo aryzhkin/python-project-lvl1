@@ -1,9 +1,20 @@
+"""
+Игра "Наибольший общий делитель (НОД)"
+Суть игры в следующем: пользователю показывается два случайных
+числа, например, 25 50. Пользователь должен вычислить
+и ввести наибольший общий делитель этих чисел.
+"""
 import random
 
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def generate_question_and_answer():
+    """Generate question and answer for user
+    Returns:
+        question: string
+        correct_answer: string
+    """
 
     question = ''
     correct_answer = ''

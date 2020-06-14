@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "aryzhkin_brain_games"
-version = "0.6.0"
-description = ""
+version = "1.0.0"
+description = "A game made as part of the python course of hexlet.io"
 authors = ["Andrey Ryzhkin <a.ryzkin@gmail.com>"]
+maintainers = ["Andrey Ryzhkin <a.ryzkin@gmail.com>"]
+repository = 'https://github.com/aryzhkin/python-project-lvl1'
 packages = [
   { include = "brain_games" },
 ]

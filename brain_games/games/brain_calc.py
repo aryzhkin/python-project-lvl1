@@ -1,3 +1,9 @@
+"""
+Игра "Калькулятор"
+Суть игры в следующем: пользователю показывается случайное математическое
+выражение, например 35 + 16, которое нужно вычислить
+и записать правильный ответ.
+"""
 import random
 import operator
 
@@ -5,6 +11,11 @@ DESCRIPTION = 'What is the result of the expression?'
 
 
 def generate_question_and_answer():
+    """Generate question and answer for user
+    Returns:
+        question: string
+        correct_answer: string
+    """
 
     question = ''
     correct_answer = ''
