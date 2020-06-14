@@ -24,15 +24,15 @@ brain-calc
 and follow the instructions
 
 ## See asciinema (setup & play video) here: 
-###Brain-calc:
+### Brain-calc:
 [![asciicast](https://asciinema.org/a/bn6Z6f0jv2ObuHo7Lryqo3A2L.svg)](https://asciinema.org/a/bn6Z6f0jv2ObuHo7Lryqo3A2L)
-###Brain-even:
+### Brain-even:
 [![asciicast](https://asciinema.org/a/dDEQ0sjWnXL7SZ33IuTk37GaH.svg)](https://asciinema.org/a/dDEQ0sjWnXL7SZ33IuTk37GaH)
-###Brain-gcd:
+### Brain-gcd:
 [![asciicast](https://asciinema.org/a/vHv7vrffcBFNaEYTNyeGlXoBw.svg)](https://asciinema.org/a/vHv7vrffcBFNaEYTNyeGlXoBw)
-###Brain-prime:
+### Brain-prime:
 [![asciicast](https://asciinema.org/a/JNBbYZeY19S1WhmBuuk6VCpdS.svg)](https://asciinema.org/a/JNBbYZeY19S1WhmBuuk6VCpdS)
-###Brain-progression:
+### Brain-progression:
 [![asciicast](https://asciinema.org/a/ULSgX3NlAy0uAqAUByLfolJsi.svg)](https://asciinema.org/a/ULSgX3NlAy0uAqAUByLfolJsi)
 
 Enjoy your game :)
