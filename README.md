@@ -6,6 +6,9 @@
 Made for hexlet.io python course<br />
 https://ru.hexlet.io/professions/python/projects/49
 
+## Python version
+Games were tested on a python 3.6 3-8. If you have found any bugs, don't hesitate to open issue.
+
 ## Game list
 - brain-calc: calculate numbers
 - brain-even: check if number is even
