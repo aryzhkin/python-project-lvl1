@@ -6,7 +6,7 @@
 """
 import random
 
-DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def generate_question_and_answer():
@@ -15,9 +15,6 @@ def generate_question_and_answer():
         question: string
         correct_answer: string
     """
-
-    question = ''
-    correct_answer = ''
 
     num1 = random.randint(10, 100)
     num2 = random.randint(10, 100)

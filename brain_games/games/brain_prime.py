@@ -6,7 +6,10 @@
 """
 import random
 
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_DESCRIPTION = 'Answer "yes" if given number is prime. ' \
+                   'Otherwise answer "no".'
+RANDOM_FROM = 1
+RANDOM_TO = 100
 
 
 def is_prime(num):
@@ -15,8 +18,12 @@ def is_prime(num):
         true or false: boolean
     """
     division_num = 2
+    max_divisor = num / 2
 
-    while num % division_num != 0:
+    if num <= 1:
+        return False
+
+    while num % division_num != 0 or division_num < max_divisor:
         division_num += 1
 
     return division_num == num
@@ -28,7 +35,7 @@ def generate_question_and_answer():
         question: string
         correct_answer: string
     """
-    question = random.randint(1, 100)
+    question = random.randint(RANDOM_FROM, RANDOM_TO)
     correct_answer = 'yes' if is_prime(question) else 'no'
 
     question = str(question)

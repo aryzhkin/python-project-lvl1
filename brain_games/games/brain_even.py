@@ -6,7 +6,7 @@
 """
 from random import randint
 
-DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
+GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def is_even(num):

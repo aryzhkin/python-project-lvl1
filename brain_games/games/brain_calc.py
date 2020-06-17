@@ -7,7 +7,7 @@
 import random
 import operator
 
-DESCRIPTION = 'What is the result of the expression?'
+GAME_DESCRIPTION = 'What is the result of the expression?'
 
 
 def generate_question_and_answer():
@@ -17,30 +17,25 @@ def generate_question_and_answer():
         correct_answer: string
     """
 
-    question = ''
-    correct_answer = ''
-
     num1 = random.randint(1, 20)
     num2 = random.randint(1, 20)
 
     # Choose operation
-    operation = {
+    operations = {
         '+': operator.add,
         '-': operator.sub,
         '*': operator.mul,
     }
 
     # список операторов
-    list_operations = operation.keys()
-    # делаем коллекцию
-    list_operations = list(list_operations)
-    # выбираем один из операторов
-    operator_str = random.choice(list_operations)
+    signs = list(operations.keys())
+    # выбираем один из операторов случайным образом
+    chosen_operator = random.choice(signs)
 
     # действие, которое требуется произвести
-    action = operation.get(operator_str)
+    action = operations.get(chosen_operator)
     correct_answer = str(action(num1, num2))
 
-    question = str(num1) + ' ' + operator_str + ' ' + str(num2)
+    question = str(num1) + ' ' + chosen_operator + ' ' + str(num2)
 
     return question, correct_answer

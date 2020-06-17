@@ -7,7 +7,8 @@
 
 import random
 
-DESCRIPTION = 'What number is missing in the progression?'
+GAME_DESCRIPTION = 'What number is missing in the progression?'
+START_NUMBER = 1
 PROGRESSION_SIZE = 10
 
 
@@ -17,21 +18,23 @@ def generate_question_and_answer():
         question: string
         correct_answer: string
     """
+    # шаг
+    step = random.randint(START_NUMBER, PROGRESSION_SIZE)
+    # индекс скрытого от игрока шага
+    hidden_step_index = random.randint(START_NUMBER, PROGRESSION_SIZE)
 
-    question = ''
-    correct_answer = ''
+    i = START_NUMBER
+    question = str(START_NUMBER)
+    while i <= PROGRESSION_SIZE:
+        number = str(START_NUMBER + step * i)
+        if hidden_step_index == i:
+            question = question + ' ' + '..'
 
-    step = random.randint(1, 10)  # шаг
-    hidden_step = random.randint(1, 10)  # скрытый от игрока шаг
-
-    # от 1 до [step*10] (10 чисел) с шагом [step]
-    i = 1
-    for number in range(1, step*10, step):
-        if i == hidden_step:
-            question = question + '..' + ' '
-            correct_answer = str(number)
+            # правильный ответ, который скрыт от пользователя
+            correct_answer = number
         else:
-            question = question + str(number) + ' '
+            question = question + ' ' + number
+
         i += 1
 
     return question, correct_answer

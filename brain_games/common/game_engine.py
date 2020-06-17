@@ -1,8 +1,8 @@
 """Основной движок, содержащий общую логику для игр."""
-from brain_games.common import cli
+import prompt
 
 
-ROUND_COUNT = 3  # кол-во раундов для игрока
+ROUNDS_COUNT = 3  # кол-во раундов для игрока
 
 
 def play_game(game):
@@ -10,25 +10,36 @@ def play_game(game):
     """
 
     print('Welcome to the Brain Games!')
-    print(game.DESCRIPTION)
+    print(game.GAME_DESCRIPTION)
 
-    user_name = cli.welcome_user()
+    user_name = welcome_user()
     i = 0
-    while i < ROUND_COUNT:
+    while i < ROUNDS_COUNT:
 
         (question, correct_answer) = game.generate_question_and_answer()
 
         print('Question: ' + question)
-        answer = cli.ask_answer()
+        user_answer = ask_answer()
 
-        if answer == correct_answer:
+        if user_answer == correct_answer:
             print('Correct!')
             i += 1
         else:
-            print("'" + str(answer) + "' is wrong answer ;(. "
+            print("'" + str(user_answer) + "' is wrong answer ;(. "
                   "Correct answer was '" + str(correct_answer) + "'.\n"
                   "Let's try again, " + str(user_name) + "!")
-            break
+            return
 
-    if (i == ROUND_COUNT):
-        print('Congratulations, ' + user_name + '!')
+    print('Congratulations, ' + user_name + '!')
+
+
+def welcome_user():
+    """Get an user name and prompt user."""
+    user_name = prompt.string('May I have your name? ')
+
+    print('Hello, ' + user_name + '!\n')
+    return user_name
+
+
+def ask_answer():
+    return prompt.string('Your answer: ')
