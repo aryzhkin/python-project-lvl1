@@ -7,6 +7,8 @@
 import random
 
 GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+RANDOM_FROM = 10
+RANDOM_TO = 100
 
 
 def generate_question_and_answer():
@@ -16,20 +18,25 @@ def generate_question_and_answer():
         correct_answer: string
     """
 
-    num1 = random.randint(10, 100)
-    num2 = random.randint(10, 100)
+    num1 = random.randint(RANDOM_FROM, RANDOM_TO)
+    num2 = random.randint(RANDOM_FROM, RANDOM_TO)
     question = str(num1) + ' ' + str(num2)
 
-    # Используем алгоритм Евклида для нахождения
-    # наибольшего общего делителя (НОД)
-    #  Вычислим, какое из чисел больше
+    correct_answer = str(get_gcd(num1, num2))
+
+    return question, correct_answer
+
+
+def get_gcd(num1, num2):
+    """Find a greatest common divider
+    We use the Euclidean algorithm to find the greatest common divisor (GCD)
+    """
+
     (bigger_num, smaller_num) = (num1, num2) if num1 > num2 else (num2, num1)
-    #  Вычсислим сам НОД
+
     while bigger_num % smaller_num > 0:
         temp_smaller_num = smaller_num
         smaller_num = bigger_num % smaller_num
         bigger_num = temp_smaller_num
 
-    correct_answer = str(smaller_num)
-
-    return question, correct_answer
+    return smaller_num

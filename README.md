@@ -1,4 +1,3 @@
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d2cafe36a160fc76dc59/test_coverage)](https://codeclimate.com/github/aryzhkin/python-project-lvl1/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d2cafe36a160fc76dc59/maintainability)](https://codeclimate.com/github/aryzhkin/python-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/aryzhkin/python-project-lvl1.svg?branch=master)](https://travis-ci.org/aryzhkin/python-project-lvl1)
 

@@ -12,14 +12,16 @@ def play_game(game):
     print('Welcome to the Brain Games!')
     print(game.GAME_DESCRIPTION)
 
-    user_name = welcome_user()
+    user_name = ask('May I have your name? ')
+    print('Hello, ' + user_name + '!\n')
+
     i = 0
     while i < ROUNDS_COUNT:
 
         (question, correct_answer) = game.generate_question_and_answer()
 
         print('Question: ' + question)
-        user_answer = ask_answer()
+        user_answer = ask('Your answer: ')
 
         if user_answer == correct_answer:
             print('Correct!')
@@ -33,13 +35,5 @@ def play_game(game):
     print('Congratulations, ' + user_name + '!')
 
 
-def welcome_user():
-    """Get an user name and prompt user."""
-    user_name = prompt.string('May I have your name? ')
-
-    print('Hello, ' + user_name + '!\n')
-    return user_name
-
-
-def ask_answer():
-    return prompt.string('Your answer: ')
+def ask(question):
+    return prompt.string(question)

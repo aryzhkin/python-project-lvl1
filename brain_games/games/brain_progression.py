@@ -8,7 +8,7 @@
 import random
 
 GAME_DESCRIPTION = 'What number is missing in the progression?'
-START_NUMBER = 1
+START_NUMBER = 5
 PROGRESSION_SIZE = 10
 
 
@@ -23,9 +23,9 @@ def generate_question_and_answer():
     # индекс скрытого от игрока шага
     hidden_step_index = random.randint(START_NUMBER, PROGRESSION_SIZE)
 
-    i = START_NUMBER
+    i = 1
     question = str(START_NUMBER)
-    while i <= PROGRESSION_SIZE:
+    while i < PROGRESSION_SIZE:
         number = str(START_NUMBER + step * i)
         if hidden_step_index == i:
             question = question + ' ' + '..'
