@@ -28,8 +28,9 @@ def play_game(game):
             i += 1
         else:
             print("'" + str(user_answer) + "' is wrong answer ;(. "
-                  "Correct answer was '" + str(correct_answer) + "'.\n"
-                  "Let's try again, " + str(user_name) + "!")
+                  "Correct answer was '" + str(correct_answer))
+            print("Let's try again, " + str(user_name) + "!")
+
             return
 
     print('Congratulations, ' + user_name + '!')

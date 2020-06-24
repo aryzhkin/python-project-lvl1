@@ -18,15 +18,14 @@ def is_prime(num):
         true or false: boolean
     """
     division_num = 2
-    max_divisor = num / 2
 
     if num <= 1:
         return False
 
-    while num % division_num != 0 or division_num < max_divisor:
+    while num % division_num != 0 and division_num * division_num <= num:
         division_num += 1
 
-    return division_num == num
+    return division_num * division_num > num
 
 
 def generate_question_and_answer():
